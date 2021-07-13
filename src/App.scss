@@ -1,0 +1,56 @@
+@use './styles/partials/variables' as *;
+@use './styles/partials/mixins' as *;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  background: $col-background;
+  color: $col-text-primary;
+}
+
+.header {
+  font-size: 25px;
+  text-align: center;
+  margin: 25px 0 15px 0;
+  letter-spacing: 5px;
+  @include tablet {
+    font-size: 60px;
+  }
+  z-index: 1;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // background: rgba(255, 255, 255, 0.8);
+  & img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  z-index: 0;
+}
+
+.image-container {
+  margin: 10px;
+  @include tablet {
+    margin: 10px 15%;
+  }
+  @include desktop {
+    margin: 10px 17.5%;
+  }
+  & img {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
